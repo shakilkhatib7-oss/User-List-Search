@@ -1,16 +1,51 @@
-# React + Vite
+# User List Search
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application built with Vite that displays a list of users with search functionality, utilizing PrimeReact for UI components and TanStack Query for data management.
 
-Currently, two official plugins are available:
+## 🚀 Features & Functionality
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🛠 Tech Stack
 
-## React Compiler
+- **React 19**: Modern UI library for building interactive interfaces.
+- **Vite**: Fast build tool and development server.
+- **Tailwind CSS v4**: Utility-first CSS framework for styling.
+- **PrimeReact**: Rich UI component library (DataTable, etc.).
+- **TanStack Query (React Query)**: Efficient server state management and data fetching.
+- **Lodash**: Utility library (used for debouncing search).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### ✨ Key Features
 
-## Expanding the ESLint configuration
+1.  **User List Display**:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+    - Fetches user data from an external API (`jsonplaceholder`).
+    - Displays data in a responsive **PrimeReact DataTable**.
+    - Columns include: ID, Name, Username, and Email.
+
+2.  **Advanced Data Handling**:
+
+    - **React Query** integration for caching, loading states (`isLoading`), and efficient data fetching.
+    - **Debounced Search**: Search input field with 500ms debounce (powered by Lodash) to optimize performance.
+
+3.  **UI & UX**:
+    - **Modern Styling**: Clean interface using Tailwind CSS.
+    - **Interactive Header**: Custom `CommonDataTableHeader` component containing the search bar.
+    - **Icons**: Integration of **PrimeIcons** and **FontAwesome**.
+
+## 📦 Installation & Run
+
+1.  **Install dependencies**:
+
+    ```bash
+    npm install
+    ```
+
+2.  **Start the development server**:
+
+    ```bash
+    npm run dev
+    ```
+
+3.  **Build for production**:
+    ```bash
+    npm run build
+    ```
